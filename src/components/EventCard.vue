@@ -5,7 +5,7 @@
             <div class="info__score">
                 <img src="./../assets/star.svg" alt="">
                 <div class="scores__score">{{ score }}</div>
-                <div class="scores__all">(467)</div>
+                <div class="scores__all">({{ reviews }})</div>
             </div>
 
             <div class="info__title">{{ name }}</div>
@@ -36,6 +36,9 @@ export default {
         },
         price: {
             type: String
+        },
+        reviews: {
+            type: Number,
         }
     }
 };
@@ -43,15 +46,32 @@ export default {
 
 <style>
 .card {
+    border-radius: 7px;
+    cursor: pointer;
+    overflow: hidden;
     width: 345px;
-    height: 332px;
+    min-height: 332px;
 
     display: flex;
     flex-direction: column;
 }
 
+
+
+.card:hover .card__img{
+    transition: transform 0.1s ease-in;
+    transform: scale(1.05);
+}
+
+.card:hover .info__title{
+    transition: all 0.1s ease-in;
+
+    text-decoration: underline;
+}
+
 .card__img {
-    border-radius: 5px;
+    
+    border-radius: 7px;
     width: 345px;
     height: 200px;
 
@@ -71,9 +91,18 @@ export default {
     gap: 3px;
 }
 
-.scores__score {}
+.scores__score {
+    font-weight: 400;
+    font-size: 14px;
+    color: #444;
+}
 
-.scores__all {}
+.scores__all {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 183%;
+    color: #999;
+}
 
 .info__title {
     text-align: left;
