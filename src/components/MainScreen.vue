@@ -139,8 +139,6 @@ export default {
 
 }
 
-.logo__img {}
-
 .title {
   font-weight: 700;
   font-size: 48px;

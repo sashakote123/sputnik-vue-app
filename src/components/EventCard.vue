@@ -14,10 +14,7 @@
                 <div class="price__foot">за экскурсию</div>
             </div>
         </div>
-
-
     </div>
-
 </template>
 
 <script>
@@ -114,7 +111,6 @@ export default {
     margin-bottom: 10px;
 }
 
-.info__price {}
 
 .price__price {
     font-weight: 700;
